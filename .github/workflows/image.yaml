@@ -25,5 +25,5 @@ jobs:
         run: |
           docker buildx build \
           --push \
-          --tag ${USERNAME}/avahi-tools:latest \
+          --tag "${{ secrets.DOCKER_HUB_USERNAME }}/avahi-tools:latest" \
           --platform linux/amd64,linux/arm/v7,linux/arm64 .
