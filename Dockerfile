@@ -1,8 +1,5 @@
 FROM alpine:3.22
 
-#DBUS is optional, as Avahi can run without it, but some features won't work
-ARG WITH_DBUS=false
-
 RUN apk add --no-cache avahi  avahi-tools dbus supervisor
 
 # Copy a default configuration file
